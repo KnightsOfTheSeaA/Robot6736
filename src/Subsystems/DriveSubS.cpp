@@ -33,6 +33,10 @@ void DriveSubS::InitDefaultCommand() {
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
 
-void DriveSubS::RotateAngle(int angle){
+void DriveSubS::RotateAngle(float Angle){
+
+	CommandBase::driveSubS->robotDrive->SetLeftRightMotorOutputs();
+	CommandBase::driveSubS->Gyro->GetAngle());
+
 
 }
