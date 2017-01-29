@@ -16,6 +16,7 @@ void Drive::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void Drive::Execute() {
 	CommandBase::driveSubS->robotDrive->ArcadeDrive(CommandBase::oi->driverJoyStick);
+
 	SmartDashboard::PutNumber("Gyro angle", CommandBase::driveSubS->Gyro->GetAngle());
 	SmartDashboard::PutNumber("Acceleration X", CommandBase::driveSubS->Acceler->GetX());
 	SmartDashboard::PutNumber("Acceleration Y", CommandBase::driveSubS->Acceler->GetY());

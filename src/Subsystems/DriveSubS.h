@@ -19,6 +19,7 @@ public:
 	BuiltInAccelerometer* Acceler;
 	DriveSubS();
 	void InitDefaultCommand();
+	void RotateAngle(float Angle);
 };
 
 #endif  // DriveSubS_H

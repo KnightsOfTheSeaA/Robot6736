@@ -9,6 +9,7 @@ OI::OI() {
 	driverJoyStick = new frc::Joystick(0);
 	cannonJoyStick = new frc::Joystick(1);
 
+
 	// Set buttons
     frc::JoystickButton* triggerBtn = new frc::JoystickButton(cannonJoyStick,1);
     //frc::JoystickButton* button11 = new frc::JoystickButton(cannonJoyStick, 11);

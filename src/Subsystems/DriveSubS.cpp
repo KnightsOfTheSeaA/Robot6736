@@ -21,9 +21,6 @@ DriveSubS::DriveSubS() : Subsystem("ExampleSubsystem") {
 	Gyro = new ADXRS450_Gyro(SPI::Port::kOnboardCS0);
 	Gyro->Reset();
 	Acceler = new BuiltInAccelerometer(BuiltInAccelerometer::Range::kRange_4G);
-
-
-
 }
 
 
@@ -35,3 +32,7 @@ void DriveSubS::InitDefaultCommand() {
 
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
+
+void DriveSubS::RotateAngle(int angle){
+
+}
