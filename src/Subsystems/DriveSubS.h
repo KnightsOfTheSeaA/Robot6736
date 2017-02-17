@@ -7,6 +7,9 @@
 #include <BuiltInAccelerometer.h>
 #include <Encoder.h>
 
+#define WHEELDIAMETER 100 // Wheel diameter in mm
+#define ENCODERDIVITION 20 // Set encoder divition
+
 class DriveSubS : public Subsystem {
 private:
 	// It's desirable that everything possible under private except
@@ -14,19 +17,19 @@ private:
 
 	//ADXRS450_Gyro Gyro;
 
-<<<<<<< HEAD
 	//long Distance[2];
 
 
-=======
->>>>>>> parent of 45e3230... angle and distance function for navigation
 public:
 	RobotDrive* robotDrive;
 	ADXRS450_Gyro* Gyro;
 	BuiltInAccelerometer* Acceler;
+	Encoder* Encoder0;
+	Encoder* Encoder1;
 	DriveSubS();
 	void InitDefaultCommand();
-	void RotateAngle(float Angle);
+	void RotateAngle(float Angle, double Speed);
+	void DriveDistance(long UDistance, short Direction, double Speed);
 };
 
 #endif  // DriveSubS_H
