@@ -69,8 +69,9 @@ public:
 
 	void AutonomousPeriodic() override {
 		frc::Scheduler::GetInstance()->Run();
-	}
 
+		//CommandBase::driveSubS->DriveDistance(500,0,0.2);
+	}
 	void TeleopInit() override {
 		// This makes sure that the autonomous stops running when
 		// teleop starts running. If you want the autonomous to

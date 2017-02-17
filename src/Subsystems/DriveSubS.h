@@ -5,6 +5,7 @@
 #include <RobotDrive.h>
 #include <ADXRS450_Gyro.h>
 #include <BuiltInAccelerometer.h>
+#include <Encoder.h>
 
 #define WHEELDIAMETER 100 // Wheel diameter in mm
 #define ENCODERDIVITION 20 // Set encoder divition

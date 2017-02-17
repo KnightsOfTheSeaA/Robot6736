@@ -7,6 +7,8 @@
 #include <SPI.h>
 #include <ADXRS450_Gyro.h>
 #include <BuiltInAccelerometer.h>
+#include <Encoder.h>
+
 
 DriveSubS::DriveSubS() : Subsystem("ExampleSubsystem")
 {
@@ -23,8 +25,9 @@ DriveSubS::DriveSubS() : Subsystem("ExampleSubsystem")
 	Gyro->Reset();
 	Acceler = new BuiltInAccelerometer(BuiltInAccelerometer::Range::kRange_4G);
 
-	Encoder0 = new Encoder(0, 1, false, 2); // Init right motor encoder
-	Encoder1 = new Encoder(2, 4, false, 2); // Init left motor encoder
+	//Encoder0 = new Encoder()
+	Encoder0 = new Encoder(0, 1, false); // Init right motor encoder
+	Encoder1 = new Encoder(2, 4, false); // Init left motor encoder
 
 	Encoder0->SetDistancePerPulse(WHEELDIAMETER/ENCODERDIVITION);
 

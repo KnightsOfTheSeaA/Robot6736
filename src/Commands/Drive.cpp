@@ -10,6 +10,8 @@ Drive::Drive() {
 
 // Called just before this Command runs the first time
 void Drive::Initialize() {
+	CommandBase::driveSubS->Encoder0->Reset();
+	CommandBase::driveSubS->Encoder1->Reset();
 
 }
 
@@ -20,6 +22,8 @@ void Drive::Execute() {
 	SmartDashboard::PutNumber("Gyro angle", CommandBase::driveSubS->Gyro->GetAngle());
 	SmartDashboard::PutNumber("Acceleration X", CommandBase::driveSubS->Acceler->GetX());
 	SmartDashboard::PutNumber("Acceleration Y", CommandBase::driveSubS->Acceler->GetY());
+	SmartDashboard::PutNumber("Encoder0", CommandBase::driveSubS->Encoder0->GetDistance());
+	SmartDashboard::PutNumber("Encoder1", CommandBase::driveSubS->Encoder1->GetDistance());
 
 }
 
