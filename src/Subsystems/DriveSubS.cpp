@@ -10,8 +10,7 @@
 #include <Encoder.h>
 
 
-DriveSubS::DriveSubS() : Subsystem("ExampleSubsystem")
-{
+DriveSubS::DriveSubS() : Subsystem("ExampleSubsystem") {
 	// Driving motor initializations
 	//leftMotor = new Spark(LEFT_MOTOR);
 	//frc::RobotDrive robotDrive { 0, 1 };
@@ -24,6 +23,7 @@ DriveSubS::DriveSubS() : Subsystem("ExampleSubsystem")
 	Gyro = new ADXRS450_Gyro(SPI::Port::kOnboardCS0);
 	Gyro->Reset();
 	Acceler = new BuiltInAccelerometer(BuiltInAccelerometer::Range::kRange_4G);
+<<<<<<< HEAD
 
 	//Encoder0 = new Encoder()
 	Encoder0 = new Encoder(0, 1, false); // Init right motor encoder
@@ -32,11 +32,12 @@ DriveSubS::DriveSubS() : Subsystem("ExampleSubsystem")
 	Encoder0->SetDistancePerPulse(WHEELDIAMETER/ENCODERDIVITION);
 
 
+=======
+>>>>>>> parent of 45e3230... angle and distance function for navigation
 }
 
 
-void DriveSubS::InitDefaultCommand()
-{
+void DriveSubS::InitDefaultCommand() {
 	// Set the default command for a subsystem here.
 	// SetDefaultCommand(new MySpecialCommand());
 	SetDefaultCommand(new Drive());
@@ -45,6 +46,7 @@ void DriveSubS::InitDefaultCommand()
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
 
+<<<<<<< HEAD
 void DriveSubS::RotateAngle(float Angle, double Speed)
 {
 /*
@@ -80,9 +82,17 @@ void DriveSubS::DriveDistance(long UDistance, short Direction, double Speed){
 
 		case 0:CommandBase::driveSubS->robotDrive->SetLeftRightMotorOutputs(Speed, -Speed);break;
 		case 1:CommandBase::driveSubS->robotDrive->SetLeftRightMotorOutputs(-Speed, Speed);break;
+=======
+void DriveSubS::RotateAngle(float Angle){
+>>>>>>> parent of 45e3230... angle and distance function for navigation
 
-	}
+	CommandBase::driveSubS->robotDrive->SetLeftRightMotorOutputs();
+	CommandBase::driveSubS->Gyro->GetAngle());
 
+<<<<<<< HEAD
 	}
 */
+=======
+
+>>>>>>> parent of 45e3230... angle and distance function for navigation
 }
