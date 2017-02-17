@@ -47,7 +47,7 @@ void DriveSubS::InitDefaultCommand()
 
 void DriveSubS::RotateAngle(float Angle, double Speed)
 {
-
+/*
 	int DAngle= CommandBase::driveSubS->Gyro->GetAngle() + Angle;
 
 	short D = abs(DAngle) / DAngle;
@@ -62,7 +62,7 @@ void DriveSubS::RotateAngle(float Angle, double Speed)
 
 	CommandBase::driveSubS->Gyro->GetAngle();
 
-
+*/
 }
 
 void DriveSubS::DriveDistance(long UDistance, short Direction, double Speed){
@@ -70,6 +70,7 @@ void DriveSubS::DriveDistance(long UDistance, short Direction, double Speed){
 
 	//Distance[0] = CommandBase::driveSubS->Encoder0->GetDistance();
 	//Distance[1] = CommandBase::driveSubS->Encoder1->GetDistance();
+/*
 	CommandBase::driveSubS->Encoder0->Reset();
 	CommandBase::driveSubS->Encoder1->Reset();
 
@@ -83,5 +84,5 @@ void DriveSubS::DriveDistance(long UDistance, short Direction, double Speed){
 	}
 
 	}
-
+*/
 }

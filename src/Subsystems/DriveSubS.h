@@ -17,7 +17,7 @@ private:
 
 	//ADXRS450_Gyro Gyro;
 
-	long Distance[2];
+	//long Distance[2];
 
 
 public:
